@@ -1,0 +1,34 @@
+.navbarTop {
+  width: 100%;
+  height: 70px;
+  padding: 0 35px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* right */
+.navbarTop_right,
+.navbarTop_rightBox {
+  display: flex;
+  align-items: stretch;
+}
+.navbarTop_rightBox:not(:last-child) {
+  margin-left: 15px;
+}
+.navbarTop_rightIcon {
+  font-size: 18px;
+}
+.navbarTop_rightBox h4 {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.85);
+  margin-right: 5px;
+}
+/* left */
+.navbarTop_left * {
+  font-size: 26px;
+}
+.navbarTop_left *:not(:last-child) {
+  margin-left: 18px;
+}
