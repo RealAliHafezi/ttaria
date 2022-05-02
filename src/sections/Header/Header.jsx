@@ -21,8 +21,10 @@ function Header() {
       console.log(scrollTop);
       if (scrollTop > lastScrollTop) {
         navRef.current.style.bottom = "0";
+        // navRef.current.style.zIndex = "-1";
       } else {
         navRef.current.style.bottom = "-50px";
+        // navRef.current.style.zIndex = "1";
       }
       lastScrollTop = scrollTop;
     });
