@@ -4,6 +4,11 @@ function Home() {
   return (
     <div className="Home">
       <Header />
+      <div
+        style={{
+          height: "1000px",
+        }}
+      ></div>
     </div>
   );
 }

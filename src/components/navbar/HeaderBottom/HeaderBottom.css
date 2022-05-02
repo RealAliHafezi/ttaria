@@ -1,0 +1,32 @@
+
+.header_bottom_menuList,
+.header_bottom_menu {
+  display: flex;
+  align-items: center;
+}
+.header_bottom_menuListItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header_bottom_menuListItem:hover .header_bottom_menuListItemText,
+.header_bottom_menuListItem:hover .header_bottom_menuListItem_iconBar {
+  color: var(--primary);
+}
+.header_bottom_menuListItem:not(:last-child) {
+  margin-left: 15px;
+}
+.header_bottom_menuListItem_icon {
+  margin-left: 5px;
+  font-size: 18px;
+  color: var(--red);
+}
+.header_bottom_menuListItem_iconBar {
+  color: black;
+  transition: all 0.2s;
+}
+.header_bottom_menuListItemText {
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
