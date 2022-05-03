@@ -1,3 +1,5 @@
+// styles
+import "./HomeIntro.css";
 // img
 import HomeIntroFirstBoxIMG from "./../../assets/images/Advertise/HomeTop.jpg";
 import HomeIntroTwoBoxIMG1 from "./../../assets/images/Advertise/TablighTop2.jpg";
@@ -9,7 +11,9 @@ function HomeIntro() {
         <img src={HomeIntroFirstBoxIMG} alt="advertise" />
       </div>
       <div className="HomeIntro_twoBox">
-        <div className="HomeIntro_twoBox_sliderBox"></div>
+        <div className="HomeIntro_twoBox_sliderBox">
+          <img src={HomeIntroTwoBoxIMG1} alt="" />
+        </div>
         <div className="HomeIntro_twoBox_twoBox">
           <div className="HomeIntro_twoBox_twoBox_imgBox">
             <img src={HomeIntroTwoBoxIMG1} alt="advertise" />
