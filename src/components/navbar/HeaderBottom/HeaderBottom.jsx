@@ -1,4 +1,3 @@
-import { useRef } from "react";
 // style
 import "./HeaderBottom.css";
 // menu items

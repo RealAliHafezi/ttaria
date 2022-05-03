@@ -32,3 +32,9 @@
 .navbarTop_left *:not(:last-child) {
   margin-left: 18px;
 }
+
+@media only screen and (max-width: 960px) {
+  .navbarTop {
+    display: none;
+  }
+}

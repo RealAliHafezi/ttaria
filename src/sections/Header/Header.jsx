@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
 // images and icons
 import Logo from "./../../assets/images/logo.png";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiShoppingBasket2Line } from "react-icons/ri";
-import { AiOutlineHeart } from "react-icons/ai";
+import { GoThreeBars } from "react-icons/go";
 // components
 import NavTop from "./../../components/navbar/NavbarTop/NavTop";
 // style
@@ -34,7 +34,7 @@ function Header() {
     <>
       <NavTop />
       <header className="Header">
-        <div className="header_container">
+        <div className="header_container header-responsive_hide_items">
           <div className="header_right">
             <div className="header_rightLogo">
               <img src={Logo} alt="Logo" />
@@ -56,15 +56,44 @@ function Header() {
               <RiShoppingBasket2Line className="header_leftBoxIcon" />
               <span>0</span>
             </div>
-            <div className="header_left_loginBtn">
+            <div className="header_left_loginBtn ">
               <FaRegUserCircle className="header_left_loginIcon" />
               <span>ثبت نام یا عضویت</span>
             </div>
           </div>
         </div>
-        <nav className="header_bottom_menu" ref={navRef}>
+        <nav
+          className="header_bottom_menu header-responsive_hide_items"
+          ref={navRef}
+        >
           <HeaderBottom />
         </nav>
+        <div className="responsive_header_container">
+          <div className="responsive_header_top">
+            <div className="responsive_header_topBox_icon">
+              <GoThreeBars className="responsive_header-menubarIcon" />
+            </div>
+            <div className="responsive_header_topBox_logo">
+              <img src={Logo} alt="Logo" />
+            </div>
+            <div className="responsive_header_topBox_icon">
+              <RiShoppingBasket2Line className="responsive_header_shoppingCart" />
+              <span className="header_top_shoppingCart">0</span>
+            </div>
+          </div>
+          <div className="responsive_header_bottom">
+            <div className="responsive_header-bottom_searchbox">
+              <input
+                type="text"
+                placeholder="نام محصول یا برند مورد نظر را جستجو کنید ..."
+              />
+              <AiOutlineSearch className="responsive_header-bottom_searchboxIcon" />
+            </div>
+            <div className="responsive_header-bottom_loginIcon">
+              <FaRegUserCircle />
+            </div>
+          </div>
+        </div>
       </header>
     </>
   );

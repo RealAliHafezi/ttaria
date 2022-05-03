@@ -12,11 +12,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 99;
 }
 .header_right,
 .header_left {
-  z-index: 99;
   display: flex;
   align-items: center;
 }
@@ -26,15 +24,19 @@
   margin-left: 40px;
   cursor: pointer;
 }
-.header_rightLogo img {
+/* two item is for responsive mode */
+.header_rightLogo img,
+.responsive_header_topBox_logo img {
   width: 100%;
   object-fit: fill;
+  cursor: pointer;
 }
 .header_right_searchbox {
   position: relative;
   min-width: 450px;
 }
-.header_right_searchbox input {
+.header_right_searchbox input,
+.responsive_header-bottom_searchbox input {
   width: 100%;
   padding: 16px 10px;
   font-size: 14px;
@@ -50,7 +52,9 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.header_right_searchboxIcon {
+/* two item is for responsive mode */
+.header_right_searchboxIcon,
+.responsive_header-bottom_searchboxIcon {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -66,7 +70,9 @@
 .header_leftBoxIcon {
   font-size: 28px;
 }
-.header_leftBox span {
+/* two item is for responsive mode */
+.header_leftBox span,
+.header_top_shoppingCart {
   width: 15px;
   height: 15px;
   font-size: 12px;
@@ -80,7 +86,6 @@
   background-color: var(--primary);
   border-radius: 50%;
 }
-
 .header_left_loginBtn {
   border: 1px solid var(--gray);
   padding: 10px 15px;
@@ -99,8 +104,6 @@
   margin-left: 5px;
   transition: all 0.2s;
 }
-.header_left_loginBtn span {
-}
 
 /* nav Bottom */
 .header_bottom_menu {
@@ -115,3 +118,67 @@
   transition: bottom 0.5s;
   z-index: -1;
 }
+/* responsive more than 920px */
+.responsive_header_container {
+  display: none;
+  visibility: hidden;
+}
+
+/* responsive less than 920px */
+@media only screen and (max-width: 960px) {
+  .Header {
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  .header-responsive_hide_items {
+    display: none;
+    visibility: hidden;
+  }
+  .responsive_header_container {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    visibility: visible;
+  }
+  .responsive_header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .responsive_header_topBox_icon {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .responsive_header_topBox_logo {
+    max-width: 140px;
+  }
+  .responsive_header_bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .responsive_header-bottom_searchbox {
+    position: relative;
+    min-width: calc(100% - 50px);
+  }
+  .responsive_header-bottom_searchbox input {
+    padding: 12px 10px;
+    transition: none;
+  }
+  .responsive_header-bottom_loginIcon {
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+/* @media only screen and (max-width: 425px) {
+  .responsive_header-bottom_searchbox input::placeholder {
+    
+  }
+} */

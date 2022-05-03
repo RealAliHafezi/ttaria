@@ -1,14 +1,16 @@
+// style
+import "./Home.css";
 // components
 import Header from "../../sections/Header/Header";
+import HomeIntro from "../../sections/HomeIntro/HomeIntro";
+//
 function Home() {
   return (
     <div className="Home">
       <Header />
-      <div
-        style={{
-          height: "1000px",
-        }}
-      ></div>
+      <div className="Home_Container">
+        <HomeIntro />
+      </div>
     </div>
   );
 }
