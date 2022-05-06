@@ -4,6 +4,8 @@ import "./HomeIntro.css";
 import HomeIntroFirstBoxIMG from "./../../assets/images/Advertise/HomeTop.jpg";
 import HomeIntroTwoBoxIMG1 from "./../../assets/images/Advertise/TablighTop2.jpg";
 import HomeIntroTwoBoxIMG2 from "./../../assets/images/Advertise/TablighTop3.jpg";
+// components
+import HomeIntroSlider from "../../components/HomeIntroSlider/HomeIntroSlider";
 function HomeIntro() {
   return (
     <div className="HomeIntro">
@@ -12,7 +14,7 @@ function HomeIntro() {
       </div>
       <div className="HomeIntro_twoBox">
         <div className="HomeIntro_twoBox_sliderBox">
-          <img src={HomeIntroTwoBoxIMG1} alt="" />
+          <HomeIntroSlider />
         </div>
         <div className="HomeIntro_twoBox_twoBox">
           <div className="HomeIntro_twoBox_twoBox_imgBox">

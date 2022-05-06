@@ -1,15 +1,8 @@
 // icons
-import { GoThreeBars } from "react-icons/go";
 import { BsPhoneFill, BsFillTelephoneFill } from "react-icons/bs";
 import { FaMemory, FaLaptop, FaBomb, FaBook } from "react-icons/fa";
 //
 export const HeaderMenuItems = [
-  {
-    text: "دسته بندی کالا ها",
-    icon: (
-      <GoThreeBars className="header_bottom_menuListItem_icon header_bottom_menuListItem_iconBar" />
-    ),
-  },
   {
     text: "گوشی موبایل",
     icon: <BsPhoneFill className="header_bottom_menuListItem_icon" />,

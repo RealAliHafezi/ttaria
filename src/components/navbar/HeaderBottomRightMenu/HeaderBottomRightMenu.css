@@ -1,0 +1,107 @@
+.Header_Bottom_Responsive_RightMenu {
+  position: absolute;
+  top: 0;
+  width: 290px;
+  height: 100vh;
+  background-color: var(--background);
+  z-index: 109 !important;
+  transition: right 0.3s ease-in-out;
+  box-shadow: 1px 1px 10px -3px black;
+  overflow-y: auto;
+}
+#close_responsive_rightMenuItems {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 26px;
+  color: var(--primary);
+  cursor: pointer;
+}
+.Header_Bottom_Responsive_RightMenuLogo {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  text-align: center;
+}
+.Header_Bottom_Responsive_RightMenuLogo img {
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+}
+/* list1 */
+.Header_Bottom_Responsive_RightMenu_List1 {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  padding: 12px 0;
+}
+.Header_Bottom_Responsive_RightMenu_List1Item {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+/* list2 */
+.Header_Bottom_Responsive_RightMenu_Bottom {
+  width: 100%;
+  height: auto;
+  padding: 12px 0;
+}
+.Header_Bottom_Responsive_RightMenu_BottomItemTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.Header_Bottom_Responsive_RightMenu_BottomItemIcon {
+  font-size: 22px;
+  color: var(--primary);
+  transition: all 0.3s;
+}
+/* list2 children */
+.Header_Bottom_Responsive_RightMenu_List2 {
+  display: flex;
+  align-items: right;
+  flex-direction: column;
+  height: 0;
+  padding: 12px 0;
+  background-color: var(--border);
+  width: 100%;
+}
+.Header_Bottom_Responsive_RightMenu_List2Item {
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.Header_Bottom_Responsive_RightMenu_List22 {
+  padding: 4px 0;
+}
+.Header_Bottom_Responsive_RightMenu_List2 li {
+  padding: 6px 18px;
+}
+.Header_Bottom_Responsive_RightMenu_List2ItemAnother {
+  display: flex;
+  justify-content: space-between;
+}
+.Header_Bottom_Responsive_RightMenu_List2Item22 {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px;
+}
+.Header_Bottom_Responsive_RightMenu_BottomItemIconLeft {
+  font-size: 16px;
+  color: var(--primary);
+}
+
+@media only screen and (min-width: 961px) {
+  .Header_Bottom_Responsive_RightMenu {
+    display: none;
+  }
+}

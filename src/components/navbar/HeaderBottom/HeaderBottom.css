@@ -1,6 +1,4 @@
-
-.header_bottom_menuList,
-.header_bottom_menu {
+.header_bottom_menuList {
   display: flex;
   align-items: center;
 }
@@ -16,6 +14,10 @@
 .header_bottom_menuListItem:not(:last-child) {
   margin-left: 15px;
 }
+.header_bottom_menuListItem_bar {
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
 .header_bottom_menuListItem_icon {
   margin-left: 5px;
   font-size: 18px;
@@ -29,4 +31,29 @@
   font-size: 14px;
   font-weight: 600;
   transition: all 0.2s;
+  display: block;
+}
+.header_bottom_menuListItem_bar:hover .header_menu_fadeIn {
+  background-color: red;
+}
+/* menu fade in */
+#header_menu_fadeIn {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  height: 60vh;
+  width: 1000px;
+  display: flex;
+  z-index: 99;
+  background-color: var(--background);
+  transition: all 0.3s;
+  border-bottom-left-radius: 6px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #header_menu_fadeIn {
+    width: 940px;
+  }
 }

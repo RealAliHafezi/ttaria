@@ -1,39 +1,48 @@
 import { useRef, useEffect } from "react";
+import { useDispatch } from "react-redux";
 // images and icons
 import Logo from "./../../assets/images/logo.png";
 import { AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiShoppingBasket2Line } from "react-icons/ri";
 import { GoThreeBars } from "react-icons/go";
+// from redux (reducers)
+import { ShowMenu } from "./HeaderSlice";
 // components
 import NavTop from "./../../components/navbar/NavbarTop/NavTop";
+import HeaderBottomRightMenu from "../../components/navbar/HeaderBottomRightMenu/HeaderBottomRightMenu";
 // style
 import "./Header.css";
 import HeaderBottom from "../../components/navbar/HeaderBottom/HeaderBottom";
 //
 function Header() {
+  const dispatch = useDispatch();
   const navRef = useRef();
+  const headerRef = useRef();
   // for navbar scroll
   useEffect(() => {
     var lastScrollTop = 0;
     window.addEventListener("scroll", () => {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(scrollTop);
       if (scrollTop > lastScrollTop) {
         navRef.current.style.bottom = "0";
-        // navRef.current.style.zIndex = "-1";
       } else {
         navRef.current.style.bottom = "-50px";
-        // navRef.current.style.zIndex = "1";
+      }
+      if (window.scrollY > 80) {
+        headerRef.current.style.top = "0";
+      } else {
+        headerRef.current.style.top = "70px";
       }
       lastScrollTop = scrollTop;
     });
   }, [window.scrollY]);
+
   //
   return (
     <>
       <NavTop />
-      <header className="Header">
+      <header className="Header" ref={headerRef}>
         <div className="header_container header-responsive_hide_items">
           <div className="header_right">
             <div className="header_rightLogo">
@@ -63,15 +72,21 @@ function Header() {
           </div>
         </div>
         <nav
-          className="header_bottom_menu header-responsive_hide_items"
           ref={navRef}
+          className="header_bottom_menu header-responsive_hide_items"
         >
           <HeaderBottom />
         </nav>
+        {/* responsive mode */}
         <div className="responsive_header_container">
           <div className="responsive_header_top">
             <div className="responsive_header_topBox_icon">
-              <GoThreeBars className="responsive_header-menubarIcon" />
+              <GoThreeBars
+                className="responsive_header-menubarIcon"
+                onClick={() => {
+                  dispatch(ShowMenu());
+                }}
+              />
             </div>
             <div className="responsive_header_topBox_logo">
               <img src={Logo} alt="Logo" />
@@ -94,6 +109,8 @@ function Header() {
             </div>
           </div>
         </div>
+        {/* responsive menu */}
+        <HeaderBottomRightMenu />
       </header>
     </>
   );

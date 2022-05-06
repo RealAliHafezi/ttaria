@@ -1,5 +1,12 @@
 .Home {
+  position: relative;
 }
 .Home_Container {
   padding: 0 20px;
+}
+
+@media only screen and (min-width: 961px) {
+  .RightMenuDark {
+    display: none;
+  }
 }
