@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 // reducers from redux-toolkit
 import {
   handleFadeOutIn,
   handleFadeInOut,
+  handleFadeInOut2,
+  handleFadeOutIn2,
 } from "../../../sections/Header/HeaderSlice";
 // style
 import "./HeaderBottom.css";
@@ -16,17 +18,17 @@ function HeaderBottom() {
   const dispatch = useDispatch();
   const menuFadeRef = useRef();
   // for child component
-  const [FadeOut, setFadeOut] = useState(false);
-  const [FadeIn, setFadeIn] = useState(false);
   const handleFadeIn = () => {
     menuFadeRef.current.style.visibility = "visible";
     menuFadeRef.current.style.opacity = "1";
-    dispatch(handleFadeInOut());
+    dispatch(handleFadeOutIn());
+    dispatch(handleFadeInOut2());
   };
   const handleFadeOut = () => {
     menuFadeRef.current.style.visibility = "hidden";
     menuFadeRef.current.style.opacity = "0";
-    dispatch(handleFadeOutIn);
+    dispatch(handleFadeInOut());
+    dispatch(handleFadeOutIn2());
   };
   return (
     <>

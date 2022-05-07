@@ -1,17 +1,32 @@
 // images
-import Imag1 from "./../../assets/images/HomeSlider/1.jpg";
-import Imag2 from "./../../assets/images/HomeSlider/2.jpg";
-import Imag3 from "./../../assets/images/HomeSlider/3.jpg";
-import Imag4 from "./../../assets/images/HomeSlider/4.jpg";
-import Imag5 from "./../../assets/images/HomeSlider/5.jpg";
-import Imag6 from "./../../assets/images/HomeSlider/6.jpg";
+import { HomeIntroSliderImage } from "./HomeIntroSliderImages";
+// swiper library
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+// import moduls required
+import { FreeMode, Navigation, Thumbs } from "swiper";
 // style
 import "./HomeIntroSlider.css";
 function HomeIntroSlider() {
   return (
-    <div id="1">
-      <img id="2" src={Imag1} alt="" />
-    </div>
+    <Swiper
+      className="HomeIntroSlider_mySwiper1"
+      spaceBetween={10}
+      navigation={true}
+      // thumbs={{ swiper: thumbsSwiper }}
+      modules={{ FreeMode, Navigation, Thumbs }}
+    >
+      {/* {HomeIntroSliderImage.length
+        ? HomeIntroSliderImage.map((img, index) => (
+            <SwiperSlide key={index}>
+              <img src={img} alt="" />
+            </SwiperSlide>
+          ))
+        : null} */}
+    </Swiper>
   );
 }
 

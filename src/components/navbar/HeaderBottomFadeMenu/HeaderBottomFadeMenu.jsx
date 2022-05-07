@@ -59,19 +59,21 @@ function HeaderBottomFadeMenu() {
       });
     }
   };
-  const handleNotHover = (e) => {
-    e.target.className = "header_menu_fadeIn_rightItem";
-  };
-  if (FadeOut) {
+  if (FadeIn) {
     firstItemRef.current.className =
       "header_menu_fadeIn_rightItem header_menu_fadeIn_rightItem_isActive";
     //
-    leftFirstRef.current.style.className = "header_menu_fadeIn_leftItemShow";
-  } else if (FadeIn) {
+    leftFirstRef.current.style.display = "flex";
+  }
+  if (FadeOut) {
     leftFirstRef.current.style.display = "flex";
     leftTwoRef.current.style.display = "none";
     leftThreeRef.current.style.display = "none";
   }
+
+  const handleNotHover = (e) => {
+    e.target.className = "header_menu_fadeIn_rightItem";
+  };
   return (
     <>
       <div className="header_menu_fadeIn_rightItems">
@@ -105,7 +107,11 @@ function HeaderBottomFadeMenu() {
       </div>
       {/* onHover top Items bottom items show */}
       <div className="header_menu_fadeIn_leftItems">
-        <div ref={leftFirstRef} className="header_menu_fadeIn_leftItemHide">
+        <div
+          ref={leftFirstRef}
+          className="header_menu_fadeIn_leftItemHide "
+          // style={{ display: "flex" }}
+        >
           {electronicFun()}
         </div>
         <div ref={leftTwoRef} className="header_menu_fadeIn_leftItemHide">
