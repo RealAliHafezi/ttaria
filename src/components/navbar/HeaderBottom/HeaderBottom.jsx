@@ -1,12 +1,4 @@
-import { useRef } from "react";
-import { useDispatch } from "react-redux";
-// reducers from redux-toolkit
-import {
-  handleFadeOutIn,
-  handleFadeInOut,
-  handleFadeInOut2,
-  handleFadeOutIn2,
-} from "../../../sections/Header/HeaderSlice";
+import { useRef, useState } from "react";
 // style
 import "./HeaderBottom.css";
 // icon
@@ -15,20 +7,21 @@ import { GoThreeBars } from "react-icons/go";
 import { HeaderMenuItems } from "./../../../data/HeaderMenuItems/headerMenuItems";
 import HeaderBottomFadeMenu from "../HeaderBottomFadeMenu/HeaderBottomFadeMenu";
 function HeaderBottom() {
-  const dispatch = useDispatch();
+  const [Fade1, setFade1] = useState(false);
+  const [Fade2, setFade2] = useState(false);
   const menuFadeRef = useRef();
   // for child component
   const handleFadeIn = () => {
     menuFadeRef.current.style.visibility = "visible";
     menuFadeRef.current.style.opacity = "1";
-    dispatch(handleFadeOutIn());
-    dispatch(handleFadeInOut2());
+    setFade1(false);
+    setFade2(true);
   };
   const handleFadeOut = () => {
     menuFadeRef.current.style.visibility = "hidden";
     menuFadeRef.current.style.opacity = "0";
-    dispatch(handleFadeInOut());
-    dispatch(handleFadeOutIn2());
+    setFade1(true);
+    setFade2(false);
   };
   return (
     <>
@@ -59,7 +52,7 @@ function HeaderBottom() {
           onMouseOver={handleFadeIn}
           onMouseOut={handleFadeOut}
         >
-          <HeaderBottomFadeMenu />
+          <HeaderBottomFadeMenu Fade1={Fade1} Fade2={Fade2} />
         </div>
       </ul>
     </>

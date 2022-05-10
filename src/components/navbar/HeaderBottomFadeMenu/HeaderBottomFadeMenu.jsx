@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useSelector } from "react-redux";
 // left Items
 import {
   systemSecurityFun,
@@ -8,13 +7,23 @@ import {
 } from "./../HeaderBottomFadeMenuItems/HeaderBottomFadeMenuItems";
 // style
 import "./HeaderBottomFadeMenu.css";
-function HeaderBottomFadeMenu() {
-  const FadeIn = useSelector((state) => state.ResponsiveMenu.FadeIn);
-  const FadeOut = useSelector((state) => state.ResponsiveMenu.FadeOut);
+function HeaderBottomFadeMenu(props) {
   const firstItemRef = useRef();
   const leftFirstRef = useRef();
   const leftTwoRef = useRef();
   const leftThreeRef = useRef();
+  if (props.Fade1) {
+    firstItemRef.current.className =
+      "header_menu_fadeIn_rightItem header_menu_fadeIn_rightItem_isActive";
+  }
+  if (props.Fade2) {
+    leftFirstRef.current.style.display = "flex";
+    leftTwoRef.current.style.display = "none";
+    leftThreeRef.current.style.display = "none";
+  }
+  const handleNotHover = (e) => {
+    e.target.className = "header_menu_fadeIn_rightItem";
+  };
   const handleHover = (e) => {
     //   for right items
     e.target.className =
@@ -59,21 +68,6 @@ function HeaderBottomFadeMenu() {
       });
     }
   };
-  if (FadeIn) {
-    firstItemRef.current.className =
-      "header_menu_fadeIn_rightItem header_menu_fadeIn_rightItem_isActive";
-    //
-    leftFirstRef.current.style.display = "flex";
-  }
-  if (FadeOut) {
-    leftFirstRef.current.style.display = "flex";
-    leftTwoRef.current.style.display = "none";
-    leftThreeRef.current.style.display = "none";
-  }
-
-  const handleNotHover = (e) => {
-    e.target.className = "header_menu_fadeIn_rightItem";
-  };
   return (
     <>
       <div className="header_menu_fadeIn_rightItems">
@@ -110,7 +104,7 @@ function HeaderBottomFadeMenu() {
         <div
           ref={leftFirstRef}
           className="header_menu_fadeIn_leftItemHide "
-          // style={{ display: "flex" }}
+          style={{ display: "flex" }}
         >
           {electronicFun()}
         </div>

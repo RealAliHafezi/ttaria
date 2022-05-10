@@ -18,27 +18,9 @@ const HeaderSlice = createSlice({
     handleHide: (state) => {
       state.ResponsiveMenu = false;
     },
-    handleFadeInOut: (state) => {
-      state.FadeOut = false;
-    },
-    handleFadeOutIn: (state) => {
-      state.FadeIn = true;
-    },
-    handleFadeInOut2: (state) => {
-      state.FadeOut = false;
-    },
-    handleFadeOutIn2: (state) => {
-      state.FadeIn = true;
-    },
   },
 });
 
-export const {
-  handleShow: ShowMenu,
-  handleHide: HideMenu,
-  handleFadeInOut,
-  handleFadeOutIn,
-  handleFadeOutIn2,
-  handleFadeInOut2,
-} = HeaderSlice.actions;
+export const { handleShow: ShowMenu, handleHide: HideMenu } =
+  HeaderSlice.actions;
 export default HeaderSlice.reducer;
