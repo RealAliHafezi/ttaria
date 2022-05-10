@@ -1,5 +1,6 @@
 .Home {
   position: relative;
+  overflow-x: none;
 }
 .Home_Container {
   padding: 0 20px;

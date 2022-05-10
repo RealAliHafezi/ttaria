@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         direction: rtl;
+        overflow-x: hidden;
     }
     li {
         list-style-type: none;
