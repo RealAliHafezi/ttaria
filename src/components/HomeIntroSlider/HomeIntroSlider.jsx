@@ -34,7 +34,6 @@ function HomeIntroSlider() {
         }}
         spaceBetween={10}
         navigation={true}
-        pagination={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
       >

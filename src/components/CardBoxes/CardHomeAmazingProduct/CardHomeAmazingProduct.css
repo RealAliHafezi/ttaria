@@ -1,0 +1,250 @@
+.CardHomeAmazingProduct {
+  width: 95%;
+  height: 100%;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* when hover in CardHomeAmazingProduct this show */
+.CardHomeAmazingProduct_icons {
+  /* display: none; */
+  transform: scale(0);
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.CardHomeAmazingProduct_icons span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background);
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.5);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.CardHomeAmazingProduct_icons_like {
+  margin-bottom: 8px;
+}
+.CardHomeAmazingProduct_image {
+  width: 100%;
+  height: 60%;
+  padding: 10px;
+}
+.CardHomeAmazingProduct_image img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+/* bottom */
+.CardHomeAmazingProduct_desc {
+  width: 100%;
+  height: 40%;
+  text-align: right;
+  padding: 0 15px 15px;
+}
+/* title */
+.CardHomeAmazingProduct_title {
+  min-height: 75%;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(78, 76, 76);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--gray);
+  position: relative;
+}
+.CardHomeAmazingProduct_stars {
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.2s;
+}
+.CardHomeAmazingProduct_starIcon {
+  font-size: 10px;
+  color: gold;
+  margin: 0 1px;
+}
+.CardHomeAmazingProduct_starIcon_none {
+  color: rgb(78, 76, 76);
+}
+.CardHomeAmazingProduct_name {
+  display: block;
+  cursor: pointer;
+  padding-top: 20px;
+  transition: all 0.3s;
+}
+/* animation */
+@keyframes hoverPriceBoxPrice {
+  from {
+    margin-left: -6px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 4px;
+    opacity: 1;
+  }
+}
+@keyframes hoverPriceBoxPrice2 {
+  from {
+    margin-left: -6px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 4px;
+    opacity: 1;
+  }
+}
+@keyframes hoverPriceBoxOff {
+  from {
+    margin-right: -10px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+@keyframes hoverPriceBoxOff2 {
+  from {
+    margin-right: -10px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
+/* price */
+.CardHomeAmazingProduct_priceBox {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.CardHomeAmazingProduct_off {
+  width: 35px;
+  height: 25px;
+  font-size: 14px;
+  color: white;
+  background-color: var(--red);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+.CardHomeAmazingProduct_price {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-left: 4px;
+  cursor: default;
+}
+.CardHomeAmazingProduct_leftPrice {
+  position: absolute;
+  top: -4px;
+  left: -14px;
+  width: 8px;
+  height: 28px;
+  border: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--primary);
+}
+@keyframes AmazingCardShoppingBtn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.CardHomeAmazingProduct_addToShoppingCartBtn {
+  width: 95%;
+  padding: 8px 0;
+  margin: 10px auto 0;
+  border-radius: 8px;
+  background-color: var(--primary);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: white;
+  transition: all 0.3s;
+}
+.CardHomeAmazingProduct_addToShoppingCartBtn span {
+  margin-right: 6px;
+}
+/* on hover */
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_icons {
+  transform: scale(1);
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_title {
+  border-bottom: none;
+  min-height: auto;
+}
+.CardHomeAmazingProduct_name:hover {
+  color: var(--red);
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_name {
+  padding-top: 0;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_stars {
+  opacity: 0;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_priceBox {
+  display: flex;
+  margin-top: 15px;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_off {
+  animation-name: hoverPriceBoxOff;
+  animation-duration: 0.3s;
+}
+.CardHomeAmazingProduct:not(:hover) .CardHomeAmazingProduct_off {
+  animation-name: hoverPriceBoxOff2;
+  animation-duration: 0.3s;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_price {
+  animation-name: hoverPriceBoxPrice;
+  animation-duration: 0.3s;
+}
+.CardHomeAmazingProduct:not(:hover) .CardHomeAmazingProduct_price {
+  animation-name: hoverPriceBoxPrice2;
+  animation-duration: 0.3s;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_leftPrice {
+  left: -15px;
+  width: 10px;
+}
+.CardHomeAmazingProduct:hover .CardHomeAmazingProduct_addToShoppingCartBtn {
+  display: flex;
+  cursor: pointer;
+  animation-name: AmazingCardShoppingBtn;
+  animation-duration: 0.3s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 330px) {
+  .CardHomeAmazingProduct_title {
+    font-size: 12px;
+    min-height: 65%;
+  }
+  .CardHomeAmazingProduct_off,
+  .CardHomeAmazingProduct_price {
+    font-size: 12px !important;
+  }
+}
