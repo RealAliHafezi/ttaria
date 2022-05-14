@@ -238,6 +238,19 @@
 
 /* responsive */
 
+@media only screen and (max-width: 980px) {
+  .CardHomeAmazingProduct:hover .CardHomeAmazingProduct_priceBox {
+    margin-top: 10px;
+  }
+  .CardHomeAmazingProduct_image {
+    height: 57%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .CardHomeAmazingProduct_image {
+    height: 60%;
+  }
+}
 @media only screen and (max-width: 330px) {
   .CardHomeAmazingProduct_title {
     font-size: 12px;
