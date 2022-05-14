@@ -1,0 +1,123 @@
+/* 
+در این قسمت به دلیل شباهت زیاد به 
+CardHomeAmazingProduct
+از کد های این قسمت استفاده کردیم و تغییراتی در ان ایجاد کردیم
+پس تعجب نکنید که از کجا آمده
+این روال در فایل 
+jsx
+هم استفاده شده است
+
+*/
+
+.CardHomeProducts {
+  width: 100%;
+  /* height: 50vh; */
+  height: 85%;
+  border: none;
+  border-left: 1px solid var(--darkGray);
+  position: relative;
+}
+.CardHomeProducts_icons {
+  top: 5px !important;
+  left: 5px !important;
+}
+.CardHomeProducts_imageBox {
+  width: 100%;
+  height: 60%;
+  padding: 10px 20px;
+}
+.CardHomeProducts_imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  box-shadow: none;
+  border-radius: 0;
+}
+/*  */
+.CardHomeProducts_priceBox {
+  margin: 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+}
+.CardHomeProducts_leftPrice {
+  position: absolute;
+  top: -5px;
+  left: -14px;
+  width: 8px;
+  height: 28px;
+  border: none;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: var(--primary);
+}
+/* on hover */
+.CardHomeProducts:hover .CardHomeAmazingProduct_icons {
+  transform: scale(1);
+}
+.CardHomeProducts:hover .CardHomeAmazingProduct_title {
+  border-bottom: none;
+  min-height: auto;
+}
+.CardHomeProducts_name:hover {
+  color: var(--red);
+}
+.CardHomeProducts:hover .CardHomeAmazingProduct_name {
+  padding-top: 0;
+}
+.CardHomeProducts:hover .CardHomeAmazingProduct_stars {
+  opacity: 0;
+}
+.CardHomeProducts:hover .CardHomeProducts_priceBox {
+  display: flex;
+  margin-top: 15px;
+}
+.CardHomeProducts:not(:hover) .CardHomeAmazingProduct_off {
+  animation-name: hoverPriceBoxOff2;
+  animation-duration: 0.3s;
+}
+.CardHomeProducts:hover .CardHomeAmazingProduct_price {
+  animation-name: hoverPriceBoxPrice;
+  animation-duration: 0.3s;
+}
+.CardHomeProducts:not(:hover) .CardHomeAmazingProduct_price {
+  animation-name: hoverPriceBoxPrice2;
+  animation-duration: 0.3s;
+}
+.CardHomeProducts:hover .CardHomeProducts_leftPrice {
+  left: -15px;
+  width: 10px;
+}
+.CardHomeProducts:hover .CardHomeAmazingProduct_addToShoppingCartBtn {
+  display: flex;
+  cursor: pointer;
+  animation-name: AmazingCardShoppingBtn;
+  animation-duration: 0.3s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 980px) {
+  .CardHomeProducts:hover .CardHomeAmazingProduct_priceBox {
+    margin-top: 10px;
+  }
+  .CardHomeProducts_image {
+    height: 57%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .CardHomeAmazingProduct_image {
+    height: 60%;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .CardHomeProducts_title {
+    font-size: 12px;
+    min-height: 65%;
+  }
+  .CardHomeAmazingProduct_off,
+  .CardHomeProducts_price {
+    font-size: 12px !important;
+  }
+}

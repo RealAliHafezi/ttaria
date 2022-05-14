@@ -57,16 +57,16 @@ function HomeAmazingProductSlider() {
       <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
         <CardHomeAmazingProduct />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
         <CardHomeAmazingProduct />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
         <CardHomeAmazingProduct />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
         <CardHomeAmazingProduct />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
         <CardHomeAmazingProduct />
       </SwiperSlide>
       <div

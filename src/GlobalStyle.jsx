@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
         --border : #eeeeee;
         --gray : #F0F0F1;
         --background : #FFFFFF;
+        --darkGray : #dfdfdf
     }
     body {
         direction: rtl;

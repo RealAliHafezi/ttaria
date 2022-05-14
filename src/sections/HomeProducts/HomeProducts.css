@@ -1,0 +1,39 @@
+.HomeProducts {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70vh;
+  padding: 20px 20px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.HomeProducts_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 10px;
+}
+.HomeProducts_title_iconBox {
+  width: 50px;
+  height: 50px;
+  background-color: var(--darkGray);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  font-size: 26px;
+  cursor: default;
+}
+.HomeProducts_title_text {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: default;
+}
+.HomeProducts_slider {
+  width: 100%;
+  height: 85%;
+}
