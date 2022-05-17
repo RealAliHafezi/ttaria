@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import HeaderSlice from "../sections/Header/HeaderSlice";
-
+import HeaderReducer from "../sections/Header/HeaderSlice";
+import ProductReducer from "./productsSlice";
 export const store = configureStore({
   reducer: {
-    ResponsiveMenu: HeaderSlice,
+    ResponsiveMenu: HeaderReducer,
+    Product: ProductReducer,
   },
 });

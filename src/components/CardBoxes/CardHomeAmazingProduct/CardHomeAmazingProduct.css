@@ -1,5 +1,5 @@
 .CardHomeAmazingProduct {
-  width: 95%;
+  width: 97%;
   height: 100%;
   border-radius: 15px;
   border: none;
@@ -189,6 +189,12 @@
   margin-right: 6px;
 }
 /* on hover */
+
+.CardHomeAmazingProduct_icons_like:hover .CardHomeAmazingProduct_icons_like * {
+  transform: scale(1.1);
+  color: blue;
+}
+/*  */
 .CardHomeAmazingProduct:hover .CardHomeAmazingProduct_icons {
   transform: scale(1);
 }

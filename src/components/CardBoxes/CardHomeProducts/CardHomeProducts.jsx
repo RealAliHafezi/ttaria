@@ -11,12 +11,12 @@ jsx
 // image and icons
 import { AiFillHeart } from "react-icons/ai";
 import { FaRandom } from "react-icons/fa";
-import { VscSave } from "react-icons/vsc";
+import { MdAddShoppingCart } from "react-icons/md";
 import { BsStarFill } from "react-icons/bs";
 import Img from "./../../../assets/images/logo.png";
 // style
 import "./CardHomeProducts.css";
-function CardHomeProducts() {
+function CardHomeProducts(props) {
   return (
     <div className="CardHomeProducts">
       <div className="CardHomeAmazingProduct_icons CardHomeProducts_icons">
@@ -40,16 +40,24 @@ function CardHomeProducts() {
             <BsStarFill className="CardHomeAmazingProduct_starIcon " />
           </div>
           <h4 className="CardHomeAmazingProduct_name">
-            گوشی موبایل سامسونگ گلکسی A12 ظرفیت 64 گیگابایت رم 4
+            {props.card.data.lable}
           </h4>
         </div>
         <div className="CardHomeProducts_priceBox">
-          <div className="CardHomeAmazingProduct_price">تومان 3,850,560</div>
+          {props.card.data.have ? (
+            <div className="CardHomeAmazingProduct_price">
+              {props.card.data.price} تومان
+            </div>
+          ) : (
+            <div className="CardHomeAmazingProduct_price CardHomeAmazingProduct_HaveNot">
+              ناموجود
+            </div>
+          )}
           <span className="CardHomeProducts_leftPrice"></span>
         </div>
         {/* when card hover this display : flex */}
         <div className="CardHomeAmazingProduct_addToShoppingCartBtn">
-          <VscSave />
+          <MdAddShoppingCart />
           <span>دیدن جزئیات و خرید</span>
         </div>
       </div>

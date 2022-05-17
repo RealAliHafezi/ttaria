@@ -107,8 +107,24 @@ jsx
   }
 }
 @media only screen and (max-width: 700px) {
-  .CardHomeAmazingProduct_image {
-    height: 60%;
+  .CardHomeProducts_imageBox {
+    height: 55%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .CardHomeProducts_imageBox {
+    height: 50%;
+  }
+  .CardHomeProducts .CardHomeAmazingProduct_addToShoppingCartBtn {
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .CardHomeProducts_imageBox {
+    height: 55%;
+  }
+  .CardHomeProducts .CardHomeAmazingProduct_addToShoppingCartBtn {
+    font-size: 14px !important;
   }
 }
 @media only screen and (max-width: 330px) {

@@ -4,17 +4,17 @@ import HomeProductsSlider from "../../components/HomeProductsSlider/HomeProducts
 import { FcPhoneAndroid } from "react-icons/fc";
 // styles
 import "./HomeProducts.css";
-function HomeProducts() {
-return (
+function HomeProducts(props) {
+  return (
     <div className="HomeProducts">
       <div className="HomeProducts_title">
         <span className="HomeProducts_title_iconBox">
-          <FcPhoneAndroid className="HomeProducts_title_icon" />
+          <props.icon className="HomeProducts_title_icon" />
         </span>
-        <h3 className="HomeProducts_title_text">موبایل سامسونگ</h3>
+        <h3 className="HomeProducts_title_text">{props.title}</h3>
       </div>
       <div className="HomeProducts_slider">
-        <HomeProductsSlider />
+        <HomeProductsSlider products={props.products} />
       </div>
     </div>
   );
