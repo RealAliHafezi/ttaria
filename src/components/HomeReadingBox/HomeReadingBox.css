@@ -1,0 +1,79 @@
+.HomeReadingBox {
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.HomeReadingBox_title {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.HomeReadingBox_title h2 {
+  font-size: 28px;
+  font-weight: 800;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.HomeReadingBox_title_blue {
+  color: var(--primary);
+}
+.HomeReadingBox_title_black {
+  color: rgba(0, 0, 0, 0.85);
+}
+.HomeReadingBox_title_blue:hover {
+  color: blue !important;
+}
+.HomeReadingBox_imageBox {
+  width: auto;
+  height: 100%;
+  margin: 40px 0;
+}
+.HomeReadingBox_imageBox img {
+  width: auto;
+  object-fit: fill;
+  margin: 0 auto;
+}
+.HomeRedaingBox_desc {
+  text-align: right;
+}
+/* in data */
+.HomeRedaingBox_desc p {
+  color: gray;
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: default;
+}
+.HomeReadingBox_desc_dark {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 900;
+  cursor: pointer;
+}
+.HomeReadingBox_desc_blue {
+  color: var(--primary);
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.HomeReadingBox_desc_blue:hover {
+  color: blue;
+}
+@media only screen and (max-width: 991px) {
+  .HomeReadingBox_imageBox {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .HomeReadingBox_imageBox img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .HomeReadingBox_imageBox {
+    width: 95%;
+    margin: 30px auto;
+  }
+  .HomeReadingBox_imageBox img {
+    width: 100%;
+  }
+}

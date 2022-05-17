@@ -1,7 +1,5 @@
 // components
 import HomeProductsSlider from "../../components/HomeProductsSlider/HomeProductsSlider";
-// icon
-import { FcPhoneAndroid } from "react-icons/fc";
 // styles
 import "./HomeProducts.css";
 function HomeProducts(props) {

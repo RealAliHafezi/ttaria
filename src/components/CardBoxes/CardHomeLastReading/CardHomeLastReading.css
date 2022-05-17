@@ -1,0 +1,111 @@
+.CardHomeLastReading {
+  width: 100%;
+  height: 100%;
+}
+.CardHomeLastReading_imageBox {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.CardHomeLastReading_imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.CardHomeLastReading_imageBox:hover img {
+  transform: scale(1.2);
+}
+.CardHomeLastReading_desc {
+  height: 20%;
+  padding: 15px 5px 0;
+}
+.CardHomeLastReading_title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.95);
+  padding: 0 25px;
+}
+.CardHomeLastReading_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  height: 20%;
+}
+.CardHomeLastReading_writer {
+  font-size: 13px;
+  font-weight: 500;
+}
+.CardHomeLastReading_date * {
+  font-size: 14px;
+  margin-left: 3px;
+}
+.CardHomeLastReading_date {
+  font-size: 11px;
+  color: gray;
+}
+.CardHomeLastReading_footerItem {
+  display: flex;
+  align-items: center;
+}
+.CardHomeLastReading_icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--darkGray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 22px;
+  margin-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .CardHomeLastReading_title {
+    padding: 0 15px;
+  }
+  .CardHomeLastReading_writer {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .CardHomeLastReading_title {
+    padding: 0 10px;
+  }
+  .CardHomeLastReading_writer {
+    font-size: 11px;
+  }
+  .CardHomeLastReading_date {
+    font-size: 10px;
+  }
+  .CardHomeLastReading_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .CardHomeLastReading_imageBox {
+    height: 50%;
+  }
+  .CardHomeLastReading_desc {
+    height: 30%;
+  }
+  .CardHomeLastReading_title {
+    padding: 0 5px;
+  }
+  .CardHomeLastReading_writer {
+    font-size: 10px;
+  }
+  .CardHomeLastReading_date {
+    font-size: 9px;
+  }
+  .CardHomeLastReading_icon {
+    width: 30px;
+    height: 30px;
+  }
+}

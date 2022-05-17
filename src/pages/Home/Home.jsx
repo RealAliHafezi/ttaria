@@ -2,6 +2,7 @@
 import { FcPhoneAndroid } from "react-icons/fc";
 import { BsApple, BsFillSpeakerFill } from "react-icons/bs";
 import { IoWatch } from "react-icons/io5";
+import { FaBook } from "react-icons/fa";
 // data
 import { HomeAdvertiseImages } from "./../../sections/HomeAdvertise/HomeAdvertiseData";
 import { MobileData } from "../../data/Mobile/AllMobileData";
@@ -14,6 +15,8 @@ import HomeAmazingProduct from "../../sections/HomeAmazingProduct/HomeAmazingPro
 import HomeImageMenu from "../../sections/HomeImageMenu/HomeImageMenu";
 import HomeProducts from "../../sections/HomeProducts/HomeProducts";
 import HomeAdvertise from "../../sections/HomeAdvertise/HomeAdvertise";
+import HomeLastReading from "../../sections/HomeLastReading/HomeLastReading";
+import HomeReading from "../../sections/HomeReading/HomeReading";
 //
 //
 
@@ -54,6 +57,8 @@ function Home() {
         <HomeAdvertise images={HomeAdvertiseImages.slice(2, 4)} />
         <HomeProducts icon={IoWatch} products={Watch} title="ساعت هوشمند" />
         <HomeAdvertise images={HomeAdvertiseImages.slice(4, 6)} />
+        <HomeLastReading icon={FaBook} title="آخرین خواندنی ها" />
+        <HomeReading />
       </div>
     </div>
   );
