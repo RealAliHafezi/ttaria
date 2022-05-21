@@ -21,7 +21,7 @@ function HomeProductsSlider(props) {
       style={{ width: "100%", height: "100%" }}
       className="HomeProductsSlider_mySwiper1"
       slidesPerView={5}
-      speed={500}
+      speed={800}
       navigation={{
         prevEl: HomeProductsSlider_mySwiper1_prevEl,
         nextEl: HomeProductsSlider_mySwiper1_nextEl,

@@ -4,19 +4,24 @@ const ProductSlice = createSlice({
   name: "Product",
   initialState: {
     favorite: [],
+    like: false,
   },
   reducers: {
     addToFavorite: (state, action) => {
-      const addItem = MobileData.filter(
-        (item) => item.productId === action.payload
+      let Item = MobileData.find(
+        (item) => item.productId === action.payload.ID
       );
-      state.favorite.push(addItem);
+      state.favorite.push(Item);
+      const newState = JSON.stringify(state.favorite);
+      localStorage.setItem("favoriteProducts", newState);
     },
     removerFromFavorite: (state, action) => {
-      const removeItem = MobileData.filter(
-        (item) => item.productId !== action.payload
+      const newState = state.favorite.filter(
+        (item) => item.productId !== action.payload.ID
       );
-      state.favorite.push(removeItem);
+      state.favorite = newState;
+      const newStateJSON = JSON.stringify(state.favorite);
+      localStorage.setItem("favoriteProducts", newStateJSON);
     },
   },
 });

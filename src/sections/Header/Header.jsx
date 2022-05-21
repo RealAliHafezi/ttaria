@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 // images and icons
 import Logo from "./../../assets/images/logo.png";
 import { AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
@@ -14,8 +15,9 @@ import HeaderBottomRightMenu from "../../components/navbar/HeaderBottomRightMenu
 // style
 import "./Header.css";
 import HeaderBottom from "../../components/navbar/HeaderBottom/HeaderBottom";
-//
+// style with styled-components
 function Header() {
+  const LikeCounter = useSelector((state) => state.Product.favorite);
   const dispatch = useDispatch();
   const navRef = useRef();
   const headerRef = useRef();
@@ -26,12 +28,12 @@ function Header() {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         navRef.current.style.bottom = "0";
-      } else {
+      } else if (scrollTop <= lastScrollTop) {
         navRef.current.style.bottom = "-50px";
       }
       if (window.scrollY > 80) {
         headerRef.current.style.top = "0";
-      } else {
+      } else if (window.screenY <= 80) {
         headerRef.current.style.top = "70px";
       }
       lastScrollTop = scrollTop;
@@ -57,13 +59,15 @@ function Header() {
             </div>
           </div>
           <div className="header_left">
-            <div className="header_leftBox">
-              <AiOutlineHeart className="header_leftBoxIcon" />
-              <span>0</span>
-            </div>
+            <Link to={"/favorite"}>
+              <div className="header_leftBox">
+                <AiOutlineHeart className="header_leftBoxIcon" />
+                <span>{LikeCounter.length ? LikeCounter.length : "۰"}</span>
+              </div>
+            </Link>
             <div className="header_leftBox">
               <RiShoppingBasket2Line className="header_leftBoxIcon" />
-              <span>0</span>
+              <span>۰</span>
             </div>
             <div className="header_left_loginBtn ">
               <FaRegUserCircle className="header_left_loginIcon" />

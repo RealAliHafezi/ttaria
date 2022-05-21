@@ -200,7 +200,7 @@
 }
 .CardHomeAmazingProduct:hover .CardHomeAmazingProduct_title {
   border-bottom: none;
-  min-height: auto;
+  min-height: 30%;
 }
 .CardHomeAmazingProduct_name:hover {
   color: var(--red);

@@ -17,21 +17,21 @@ import HomeProducts from "../../sections/HomeProducts/HomeProducts";
 import HomeAdvertise from "../../sections/HomeAdvertise/HomeAdvertise";
 import HomeLastReading from "../../sections/HomeLastReading/HomeLastReading";
 import HomeReading from "../../sections/HomeReading/HomeReading";
+import Footer from "../../sections/Footer/Footer";
 //
-//
-
 function Home() {
   const samsungMobiles = MobileData.filter((item) => item.filter === "samsung");
   const appleMobiles = MobileData.filter((item) => item.filter === "apple");
   const xiaomiMobiles = MobileData.filter((item) => item.filter === "xiaomi");
   const Speaker = MobileData.filter((item) => item.filter === "speaker");
   const Watch = MobileData.filter((item) => item.filter === "watch");
+  const Offer = MobileData.filter((item) => item.data.off);
   return (
     <div className="Home">
       <Header />
       <div className="Home_Container">
         <HomeIntro />
-        <HomeAmazingProduct />
+        <HomeAmazingProduct products={Offer} />
         <HomeImageMenu />
         <HomeProducts
           icon={FcPhoneAndroid}
@@ -60,6 +60,7 @@ function Home() {
         <HomeLastReading icon={FaBook} title="آخرین خواندنی ها" />
         <HomeReading />
       </div>
+      <Footer />
     </div>
   );
 }

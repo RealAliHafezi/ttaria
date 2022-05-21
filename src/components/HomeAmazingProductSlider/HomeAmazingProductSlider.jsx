@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/bundle";
 // style
 import "./HomeAmazingProductSlider.css";
-function HomeAmazingProductSlider() {
+function HomeAmazingProductSlider(props) {
   const HomeAmazingProductSliderMySwiperPrevBtn = useRef(null);
   const HomeAmazingProductSliderMySwiperNextBtn = useRef(null);
   return (
@@ -54,21 +54,15 @@ function HomeAmazingProductSlider() {
         },
       }}
     >
-      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
-        <CardHomeAmazingProduct />
-      </SwiperSlide>
-      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
-        <CardHomeAmazingProduct />
-      </SwiperSlide>
-      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
-        <CardHomeAmazingProduct />
-      </SwiperSlide>
-      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
-        <CardHomeAmazingProduct />
-      </SwiperSlide>
-      <SwiperSlide className="HomeAmazingProductSlider_mySwiper1_slide">
-        <CardHomeAmazingProduct />
-      </SwiperSlide>
+      {props.products &&
+        props.products.map((item, index) => (
+          <SwiperSlide
+            key={index}
+            className="HomeAmazingProductSlider_mySwiper1_slide"
+          >
+            <CardHomeAmazingProduct card={item} />
+          </SwiperSlide>
+        ))}
       <div
         ref={HomeAmazingProductSliderMySwiperNextBtn}
         className="HomeAmazingProductSlider_mySwiper1_Btn"

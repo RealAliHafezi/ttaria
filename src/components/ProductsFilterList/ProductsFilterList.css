@@ -1,0 +1,63 @@
+/* The ProductsFilterList_switch - the box around the slider */
+.ProductsFilterList_switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.ProductsFilterList_switch .ProductsFilterList_switchInp {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.ProductsFilterList_switch_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--gray);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.ProductsFilterList_switch_slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 1px;
+  background-color: var(--gray);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.ProductsFilterList_switchInp:checked + .ProductsFilterList_switch_slider {
+  background-color: #2196f3;
+  border: 1px solid transparent;
+}
+
+.ProductsFilterList_switchInp:focus + .ProductsFilterList_switch_slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.ProductsFilterList_switchInp:checked
+  + .ProductsFilterList_switch_slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.ProductsFilterList_switch_slider.ProductsFilterList_switch_slider_round {
+  border-radius: 34px;
+}
+.ProductsFilterList_switch_slider.ProductsFilterList_switch_slider_round:before {
+  border-radius: 50%;
+}

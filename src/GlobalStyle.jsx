@@ -36,4 +36,8 @@ export const GlobalStyle = createGlobalStyle`
     li {
         list-style-type: none;
     }
+    a , Link {
+        text-decoration: none;
+        color: unset;
+    }
 `;
